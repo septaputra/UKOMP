@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bitmap wrapper: change gravity/scale as needed. Place your PNG as @drawable/studymate_logo (e.g. drawable-nodpi/studymate_logo.png) -->
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/studymate_logo"
+            android:antialias="true" />
+    </item>
+</layer-list>
