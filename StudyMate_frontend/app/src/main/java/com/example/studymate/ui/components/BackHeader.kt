@@ -1,0 +1,60 @@
+package com.example.studymate.ui.components
+
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
+import com.example.studymate.ui.localization.LocalAppLanguage
+import com.example.studymate.ui.localization.localizedUiLabel
+
+@Composable
+fun StudyMateBackHeader(
+    title: String? = null,
+    onBack: () -> Unit,
+    actions: @Composable (() -> Unit)? = null
+) {
+    val language = LocalAppLanguage.current
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .statusBarsPadding()
+            .padding(start = 4.dp, top = 8.dp, end = 4.dp, bottom = 4.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        IconButton(
+            onClick = onBack,
+            modifier = Modifier.size(48.dp)
+        ) {
+            Icon(Icons.Default.ArrowBack, contentDescription = localizedUiLabel(language, "Kembali"))
+        }
+        if (title != null) {
+            Spacer(modifier = Modifier.width(4.dp))
+            Text(
+                text = localizedUiLabel(language, title),
+                modifier = if (actions != null) Modifier.weight(1f) else Modifier,
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.SemiBold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+        } else {
+            Spacer(modifier = Modifier.weight(1f))
+        }
+        actions?.invoke()
+    }
+}
