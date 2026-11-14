@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'title' => 'Berita Pendidikan',
+    'description' => 'Kelola konten berita pendidikan',
+    'add' => 'Tambah Berita',
+    'headline' => 'Judul',
+    'internal_label' => 'Penanda internal',
+    'internal_name_placeholder' => 'berita pendidikan 1',
+    'internal_name_help' => 'Judul ini hanya untuk penanda internal card admin.',
+    'category' => 'Kategori',
+    'status' => 'Status Publikasi',
+    'summary' => 'Ringkasan',
+    'image' => 'Pratinjau Thumbnail',
+    'news_link' => 'Link berita',
+    'link_label' => 'URL Berita',
+    'category_placeholder' => 'Tips Belajar',
+    'create_title' => 'Tambah Berita',
+    'edit_title' => 'Edit Berita',
+    'delete_confirm' => 'Apakah Anda yakin ingin menghapus berita ini?',
+    'required_error' => 'Judul, URL berita, dan status publikasi wajib diisi.',
+    'url_error' => 'Link berita harus menggunakan format URL yang benar.',
+    'preview_alt' => 'Pratinjau thumbnail berita',
+    'preview_error' => 'Thumbnail tidak ditemukan dari URL berita. Periksa URL dan coba lagi.',
+    'created' => 'Berita baru berhasil ditambahkan.',
+    'updated' => 'Berita berhasil diperbarui.',
+    'deleted' => 'Berita berhasil dihapus.',
+];

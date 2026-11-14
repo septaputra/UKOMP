@@ -1,0 +1,28 @@
+<?php
+
+return [
+    'title' => 'Education News',
+    'description' => 'Manage education news content',
+    'add' => 'Add News',
+    'headline' => 'Title',
+    'internal_label' => 'Internal label',
+    'internal_name_placeholder' => 'education news 1',
+    'internal_name_help' => 'This title is only an internal label for the admin card.',
+    'category' => 'Category',
+    'status' => 'Publication Status',
+    'summary' => 'Summary',
+    'image' => 'Thumbnail Preview',
+    'news_link' => 'News Link',
+    'link_label' => 'News URL',
+    'category_placeholder' => 'Study Tips',
+    'create_title' => 'Add News',
+    'edit_title' => 'Edit News',
+    'delete_confirm' => 'Are you sure you want to delete this news article?',
+    'required_error' => 'Title, news URL, and publication status are required.',
+    'url_error' => 'Enter a valid news URL.',
+    'preview_alt' => 'News thumbnail preview',
+    'preview_error' => 'Could not find a thumbnail at this news URL. Check the URL and try again.',
+    'created' => 'News article added successfully.',
+    'updated' => 'News article updated successfully.',
+    'deleted' => 'News article deleted successfully.',
+];
